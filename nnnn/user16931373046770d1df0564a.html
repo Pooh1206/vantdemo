@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>用户中心1</title>
+		<link rel="stylesheet" href="common/vant.min.css" />
+		<script src="common/vue.js"></script>
+		<script src="common/vant.min.js"></script>
+		<script src="common/axios.min.js"></script>
+		<script src="common/Session.js"></script>
+		<script src="common/Tools.js"></script>
+		<script src="common/Validate.js"></script>
+		<script src="common/Page.js"></script>
+		<script src="common/Http.js"></script>
+		<script src="common/index.umd.js"></script>
+		<link rel="stylesheet" href="common/diygw-ui/index.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="container container24325">
+				<div class="flex diygw-col-24 diygw-bottom">
+					<div class="diygw-grid diygw-actions">
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="font-size: calc(35px - 12px); width: 35px; height: 35px">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid1.png" />
+								</div>
+								<div class="diygw-grid-title">หน้าหลัก</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="font-size: calc(35px - 12px); width: 35px; height: 35px">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid2.png" />
+								</div>
+								<div class="diygw-grid-title">菜单二</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="font-size: calc(35px - 12px); width: 35px; height: 35px">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid3.png" />
+								</div>
+								<div class="diygw-grid-title">菜单三</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="font-size: calc(35px - 12px); width: 35px; height: 35px">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid4.png" />
+								</div>
+								<div class="diygw-grid-title">菜单四</div>
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz user-relative">
+					<div class="flex flex-wrap diygw-col-24 flex6-clz">
+						<div class="diy-icon-scan diygw-col-0 text2-clz"></div>
+						<div class="diy-icon-settings diygw-col-0 text10-clz"></div>
+						<div class="diy-icon-comment diygw-col-0 text8-clz"></div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 items-center flex1-clz">
+						<div class="flex diygw-col-0">
+							<div class="diygw-avatar lg radius bg-none">
+								<img mode="aspectFit" class="diygw-avatar-img radius" src="./static/tx-nxs4.png" />
+							</div>
+						</div>
+						<div class="diygw-col-0 text1-clz diygw-text-md">点击登录</div>
+						<div class="diy-icon-right diygw-col-0 text3-clz diygw-text-md"></div>
+					</div>
+					<div class="flex diygw-col-24 flex-nowrap flex5-clz">
+						<div class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex2-clz">
+							<div class="diygw-col-0 text-clz diygw-text-lg">99</div>
+							<div class="diygw-col-0 text4-clz">喜欢</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex3-clz">
+							<div class="diygw-col-0 text5-clz diygw-text-lg">99</div>
+							<div class="diygw-col-0 text7-clz">浏览记录</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex4-clz">
+							<div class="diygw-col-0 text6-clz diygw-text-lg">99</div>
+							<div class="diygw-col-0 text9-clz">商品关注</div>
+						</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 items-center flex7-clz user-bottom">
+						<div class="diygw-col-0 text11-clz">超级会员</div>
+						<div class="diygw-col-0 text13-clz">超级会员预计一年可省99元</div>
+						<div class="diygw-col-0 text12-clz">立即查看</div>
+					</div>
+				</div>
+				<div :borderBottom="false" class="diygw-title diygw-top pink">
+					<i onclick="history.back(-1)" class="title-bar-icon diy-icon-back"></i> <span class="back-text" onclick="history.back(-1)">返回</span> <i onclick="location.href='index.html'" class="title-bar-icon diy-icon-home margin-left"></i>
+					<div class="title flex1 text-center textindent50">ข้อมูล</div>
+				</div>
+				<div class="flex diygw-col-24 grid-clz">
+					<div class="diygw-grid col-5">
+						<div class="diygw-grid-item">
+							<div class="diygw-grid-inner grid-item-clz">
+								<div class="diygw-grid-icon diygw-avatar grid-icon-clz diy-icon-pay">
+									<div class="diygw-tag badge grid-badge-0 red">10</div>
+								</div>
+								<div class="diygw-grid-title">待付款</div>
+							</div>
+						</div>
+						<div class="diygw-grid-item">
+							<div class="diygw-grid-inner grid-item-clz">
+								<div class="diygw-grid-icon diygw-avatar grid-icon-clz diy-icon-deliver"></div>
+								<div class="diygw-grid-title">待发货</div>
+							</div>
+						</div>
+						<div class="diygw-grid-item">
+							<div class="diygw-grid-inner grid-item-clz">
+								<div class="diygw-grid-icon diygw-avatar grid-icon-clz diy-icon-send"></div>
+								<div class="diygw-grid-title">待收货</div>
+							</div>
+						</div>
+						<div class="diygw-grid-item">
+							<div class="diygw-grid-inner grid-item-clz">
+								<div class="diygw-grid-icon diygw-avatar grid-icon-clz diy-icon-comment"></div>
+								<div class="diygw-grid-title">待评价</div>
+							</div>
+						</div>
+						<div class="diygw-grid-item">
+							<div class="diygw-grid-inner grid-item-clz">
+								<div class="diygw-grid-icon diygw-avatar grid-icon-clz diy-icon-refund"></div>
+								<div class="diygw-grid-title">退换</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 flex-nowrap flex8-clz">
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex10-clz">
+						<div class="diygw-col-0 diygw-text-lg">99</div>
+						<div class="diygw-col-0">积分</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex12-clz">
+						<div class="diygw-col-0 diygw-text-lg">10</div>
+						<div class="diygw-col-0">优惠券</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex14-clz">
+						<div class="diygw-col-0 diygw-text-lg">200</div>
+						<div class="diygw-col-0">余额</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex9-clz">
+						<div class="diy-icon-moneybag diygw-col-0 text16-clz diygw-text-lg"></div>
+						<div class="diygw-col-0">余额</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 flex-nowrap flex11-clz">
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex21-clz">
+						<div class="diy-icon-calendar diygw-col-0">签到</div>
+						<div class="diygw-col-0 text37-clz">每日签到，领取积分</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex13-clz">
+						<div class="diy-icon-calendar diygw-col-0">付款码</div>
+						<div class="diygw-col-0 text24-clz">到店扫码 快捷支持</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 list1-clz">
+					<div class="diygw-list small">
+						<div style="" class="diygw-item col-100 row solid-bottom solid-small-bottom">
+							<div class="diygw-avatar">
+								<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon15_ss.png" />
+							</div>
+							<div class="content">
+								<div class="title">浏览记录</div>
+								<div class="text-sm remark"></div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-100 row solid-bottom solid-small-bottom">
+							<div class="diygw-avatar">
+								<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon15_aq.png" />
+							</div>
+							<div class="content">
+								<div class="title">安全隐私</div>
+								<div class="text-sm remark"></div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-100 row solid-bottom solid-small-bottom">
+							<div class="diygw-avatar">
+								<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon15_js.png" />
+							</div>
+							<div class="content">
+								<div class="title">在线帮助</div>
+								<div class="text-sm remark"></div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-100 row solid-bottom solid-small-bottom">
+							<div class="diygw-avatar">
+								<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon15_sy.png" />
+							</div>
+							<div class="content">
+								<div class="title">关于我们</div>
+								<div class="text-sm remark"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<scroll-view @scrolltoupper="scrolltoupperFlex15" @scrolltolower="scrolltolowerFlex15" scroll-x scroll-with-animation class="flex scroll-view diygw-col-24 flex-nowrap flex15-clz">
+					<div class="flex flex-nowrap">
+						<div class="flex flex-wrap diygw-col-21 flex-direction-column flex16-clz">
+							<div class="diygw-title flex gradual-orange diygw-col-24">
+								<div class="title font-normal">热门课程Top50</div>
+								<div class="more">
+									<span class="diy-icon-right"></span>
+								</div>
+							</div>
+							<div class="flex diygw-col-24">
+								<div class="diygw-list">
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list-item-clz">
+										<div class="diygw-avatar list-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list-item-clz">
+										<div class="diygw-avatar list-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-3jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list-item-clz">
+										<div class="diygw-avatar list-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-21 flex-direction-column flex17-clz">
+							<div class="diygw-title flex gradual-red diygw-col-24">
+								<div class="title font-normal">热门课程Top50</div>
+								<div class="more">
+									<span class="diy-icon-right"></span>
+								</div>
+							</div>
+							<div class="flex diygw-col-24">
+								<div class="diygw-list">
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list4-item-clz">
+										<div class="diygw-avatar list4-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list4-item-clz">
+										<div class="diygw-avatar list4-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-3jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list4-item-clz">
+										<div class="diygw-avatar list4-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-3 flex-direction-column"></div>
+					</div>
+				</scroll-view>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex19-clz">
+					<div class="flex diygw-col-24 items-end flex-nowrap flex20-clz">
+						<div class="flex flex-wrap diygw-col-0 items-center flex22-clz">
+							<span class="flex icon diygw-col-0 diy-icon-upstage"></span>
+							<div class="diygw-col-0 text14-clz">重量级颁奖环节</div>
+						</div>
+						<img src="./static/star.png" class="image-size diygw-image diygw-col-0" mode="widthFix" />
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column flex23-clz">
+						<div class="diygw-col-24">低代码领域最具成长性企业</div>
+						<div class="diygw-col-24">低代码领域突出贡献企业</div>
+						<div class="diygw-col-24">低代码领域创新企业</div>
+						<div class="diygw-col-24">低代码领域优秀服务机构</div>
+					</div>
+					<div class="flex diygw-col-24 items-end flex-nowrap flex24-clz">
+						<div class="flex flex-wrap diygw-col-0 items-center flex25-clz">
+							<span class="flex icon1 diygw-col-0 diy-icon-creative1"></span>
+							<div class="diygw-col-0 text29-clz">媒体关注度高</div>
+						</div>
+						<img src="./static/star.png" class="image1-size diygw-image diygw-col-0" mode="widthFix" />
+					</div>
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column flex26-clz">
+						<div class="diygw-col-24">1、评选活动不收取任何费用；</div>
+						<div class="diygw-col-24">2、参加评选活动需填写申报书；</div>
+						<div class="diygw-col-24">3、申报材料要求内容真实、字迹清晰、印章清晰可辨；</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 flex-nowrap flex27-clz">
+					<img src="./static/61e6884d9314bebabb93cf5b3cf4fb15.jpg" class="image4-size diygw-image diygw-col-0 image4-clz" mode="scaleToFill" />
+					<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex28-clz">
+						<div class="diygw-col-24 text33-clz">Lenovo/联想小新Air14 Plus2021英特尔酷睿i5独显</div>
+						<div class="flex flex-wrap diygw-col-24">
+							<div class="diygw-col-0 gradual-red text34-clz">3人团</div>
+							<div class="diygw-col-0 gradual-red text36-clz">已拼999台</div>
+						</div>
+						<div class="flex diygw-col-24 justify-between">
+							<div style="color: #ff0303" class="diygw-tag diygw-capsule">
+								<div style="color: #ff0303" class="diygw-tag bg-gradual-orange md radius">拼</div>
+								<div class="diygw-tag diygw-line-gradual-orange radius md">¥3698.00</div>
+							</div>
+							<div class="diygw-tag md radius bg-gradual-orange">
+								<span> 马上抢 </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="version text-grey flex-direction-column flex diygw-col-24 justify-center align-center">
+					<div>DIY官网代码生成器生成</div>
+					<div>http://www.diygw.com</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</body>
+	<script type="module">
+		const app = Vue.createApp({
+			data() {
+				return {
+					articles: {
+						code: 200,
+						msg: '登录成功',
+						data: {
+							token: 'token123',
+							username: 'diygw',
+							avatar: 'https://libs.diygw.com/upload/xcx.jpg'
+						}
+					}
+				};
+			},
+			created() {
+				this.init();
+			},
+			methods: {
+				async init() {
+					await this.articlesApi();
+				},
+				// 门章 API请求方法
+				async articlesApi(param) {
+					param = param || {};
+					let articles = await this.$http.post(
+						'https://agent.diygw.com/login.php',
+						{
+							username: param.username || 'admin',
+							password: param.password || 'admin'
+						},
+						{},
+						'json'
+					);
+
+					this.setData({ articles });
+				},
+				scrolltoupperFlex15(evt) {},
+				scrolltolowerFlex15(evt) {}
+			}
+		});
+		app.use(vant);
+		app.use(DiygwLib);
+		app.config.globalProperties.$tools = new Tools();
+		app.config.globalProperties.$http = httpService;
+		app.config.globalProperties.$session = Session;
+		app.mixin({
+			methods: {
+				Validate,
+				setData,
+				navigateTo,
+				showModal,
+				showToast,
+				uploadImage
+			}
+		});
+		app.mount('#app');
+	</script>
+	<style>
+		.flex-clz {
+			border-bottom-left-radius: 10%;
+			z-index: 100;
+			overflow: hidden;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 10%;
+			background-image: linear-gradient(45deg, #f43f3b, #ec008c);
+			height: 230px;
+		}
+		.user-relative {
+			position: relative;
+		}
+		.flex6-clz {
+			margin-left: 5px;
+			z-index: 100;
+			width: calc(100% - 5px - 5px) !important;
+			margin-top: 30px;
+			margin-bottom: 0px;
+			margin-right: 5px;
+		}
+		.text2-clz {
+			margin-left: 5px;
+			color: rgba(255, 255, 255, 1);
+			flex: 1;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.text10-clz {
+			margin-left: 5px;
+			color: rgba(255, 255, 255, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.text8-clz {
+			margin-left: 5px;
+			color: rgba(255, 255, 255, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.flex1-clz {
+			margin-left: 10px;
+			z-index: 100;
+			width: calc(100% - 10px - 10px) !important;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 10px;
+		}
+		.text1-clz {
+			margin-left: 5px;
+			color: rgba(255, 255, 255, 1);
+			flex: 1;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.text3-clz {
+			margin-left: 5px;
+			color: rgba(255, 255, 255, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.flex5-clz {
+			z-index: 100;
+		}
+		.flex2-clz {
+			z-index: 100;
+		}
+		.text-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.text4-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.flex3-clz {
+			z-index: 100;
+		}
+		.text5-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.text7-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.flex4-clz {
+			z-index: 100;
+		}
+		.text6-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.text9-clz {
+			color: rgba(255, 255, 255, 1);
+		}
+		.flex7-clz {
+			border-bottom-left-radius: 0px;
+			z-index: 100;
+			font-size: 11px !important;
+			border-top-right-radius: 10px;
+			margin-right: 20px;
+			margin-left: 20px;
+			overflow: hidden;
+			width: calc(100% - 20px - 20px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 0px;
+			border-bottom-right-radius: 0px;
+			background-image: linear-gradient(319deg, #3b3b3b 1%, #707070 99%);
+			margin-bottom: 0px;
+			height: 30px;
+		}
+		.user-bottom {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.text11-clz {
+			margin-left: 5px;
+			color: rgba(252, 248, 1, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.text13-clz {
+			margin-left: 5px;
+			color: rgba(252, 248, 1, 1);
+			flex: 1;
+			font-size: 11px !important;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			text-align: center;
+			margin-right: 5px;
+		}
+		.text12-clz {
+			padding-top: 3px;
+			border-bottom-left-radius: 20px;
+			padding-left: 5px;
+			font-size: 10px !important;
+			padding-bottom: 3px;
+			border-top-right-radius: 20px;
+			margin-right: 5px;
+			margin-left: 0px;
+			overflow: hidden;
+			border-top-left-radius: 20px;
+			margin-top: 0px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(319deg, #f3d512 1%, #f7ed78 99%);
+			margin-bottom: 0px;
+			padding-right: 5px;
+		}
+		.grid-clz {
+			margin-left: 10px;
+			border-bottom-left-radius: 12px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-top-right-radius: 12px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+		}
+		.grid-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.grid-icon-clz {
+			font-size: calc(30px - 4px) !important;
+
+			width: 30px;
+			height: 30px;
+		}
+		.grid-badge-0 {
+			padding-left: 0px;
+			padding-right: 0px;
+			right: -7px;
+			top: -5px;
+		}
+		.flex8-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 12px;
+			z-index: 100;
+			padding-left: 0px;
+			padding-bottom: 10px;
+			border-top-right-radius: 12px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 10px;
+			padding-right: 0px;
+		}
+		.flex10-clz {
+			z-index: 100;
+		}
+		.flex12-clz {
+			z-index: 100;
+		}
+		.flex14-clz {
+			z-index: 100;
+		}
+		.flex9-clz {
+			z-index: 100;
+		}
+		.text16-clz {
+			color: rgba(255, 0, 0, 1);
+		}
+		.flex11-clz {
+			z-index: 100;
+		}
+		.flex21-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 12px;
+			z-index: 100;
+			padding-left: 0px;
+			padding-bottom: 10px;
+			border-top-right-radius: 12px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 10px;
+			padding-right: 0px;
+		}
+		.text37-clz {
+			margin-left: 5px;
+			color: rgba(149, 149, 149, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.flex13-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 12px;
+			z-index: 100;
+			padding-left: 0px;
+			padding-bottom: 10px;
+			border-top-right-radius: 12px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 10px;
+			padding-right: 0px;
+		}
+		.text24-clz {
+			margin-left: 5px;
+			color: rgba(149, 149, 149, 1);
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.list1-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 12px;
+			padding-left: 0px;
+			padding-bottom: 10px;
+			border-top-right-radius: 12px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 10px;
+			padding-right: 0px;
+		}
+		.flex15-clz {
+			padding-top: 5px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.flex16-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(87.5% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.list-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list-item-clz .list-icon-clz {
+			width: 60px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+		.flex17-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(87.5% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.list4-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list4-item-clz .list4-icon-clz {
+			width: 60px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+		.flex19-clz {
+			padding-top: 8px;
+			padding-left: 8px;
+			padding-bottom: 8px;
+			padding-right: 8px;
+		}
+		.flex20-clz {
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.flex22-clz {
+			background-color: #ee0000;
+			padding-top: 8px;
+			color: #ffffff;
+			padding-left: 12px;
+			padding-bottom: 8px;
+			padding-right: 12px;
+		}
+		.icon {
+			font-size: 22px;
+		}
+		.text14-clz {
+			font-weight: bold;
+		}
+		.image-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.flex23-clz {
+			margin-left: 0px;
+			border: 1px solid #ee0000;
+			padding-top: 8px;
+			padding-left: 8px;
+			width: 100% !important;
+			font-size: 14px !important;
+			padding-bottom: 8px;
+			line-height: 2;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 0px;
+			padding-right: 8px;
+		}
+		.flex24-clz {
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.flex25-clz {
+			background-color: #ee0000;
+			padding-top: 8px;
+			color: #ffffff;
+			padding-left: 12px;
+			padding-bottom: 8px;
+			padding-right: 12px;
+		}
+		.icon1 {
+			font-size: 20px;
+		}
+		.text29-clz {
+			font-weight: bold;
+		}
+		.image1-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.flex26-clz {
+			margin-left: 0px;
+			border: 1px solid #ee0000;
+			padding-top: 8px;
+			padding-left: 8px;
+			width: 100% !important;
+			font-size: 14px !important;
+			padding-bottom: 8px;
+			line-height: 2;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 0px;
+			padding-right: 8px;
+		}
+		.flex27-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 6px;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-top-right-radius: 6px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 4px 1px rgba(77, 77, 77, 0.19);
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 10px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+		.image4-clz {
+			border-bottom-left-radius: 6px;
+			overflow: hidden;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+		}
+		.image4-size {
+			height: 120px !important;
+			width: 120px !important;
+		}
+		.flex28-clz {
+			margin-left: 5px;
+			flex: 1;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: 0px;
+		}
+		.text33-clz {
+			font-size: 14px !important;
+		}
+		.text34-clz {
+			padding-top: 3px;
+			border-bottom-left-radius: 3px;
+			padding-left: 5px;
+			padding-bottom: 3px;
+			border-top-right-radius: 3px;
+			margin-right: 5px;
+			margin-left: 0px;
+			overflow: hidden;
+			border-top-left-radius: 3px;
+			margin-top: 0px;
+			border-bottom-right-radius: 3px;
+			margin-bottom: 0px;
+			padding-right: 5px;
+		}
+		.text36-clz {
+			padding-top: 3px;
+			border-bottom-left-radius: 3px;
+			padding-left: 5px;
+			padding-bottom: 3px;
+			border-top-right-radius: 3px;
+			margin-right: 5px;
+			margin-left: 0px;
+			overflow: hidden;
+			border-top-left-radius: 3px;
+			margin-top: 0px;
+			border-bottom-right-radius: 3px;
+			margin-bottom: 0px;
+			padding-right: 5px;
+		}
+		.container24325 {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.container24325 {
+			padding-top: 45px;
+			padding-bottom: 80px;
+		}
+	</style>
+</html>

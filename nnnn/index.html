@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>首页</title>
+		<link rel="stylesheet" href="common/vant.min.css" />
+		<script src="common/vue.js"></script>
+		<script src="common/vant.min.js"></script>
+		<script src="common/axios.min.js"></script>
+		<script src="common/Session.js"></script>
+		<script src="common/Tools.js"></script>
+		<script src="common/Validate.js"></script>
+		<script src="common/Page.js"></script>
+		<script src="common/Http.js"></script>
+		<script src="common/index.umd.js"></script>
+		<link rel="stylesheet" href="common/diygw-ui/index.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="container container24325">
+				<div Header class="diygw-title diygw-top pink">
+					<div Header class="flex flex-nowrap diygw-col-24 items-start" @click="navigateTo" data-type="page" data-url="index.html">
+						<div :borderBottom="false" class="diygw-title diygw-top pink">
+							<i onclick="history.back(-1)" class="title-bar-icon diy-icon-back"></i> <span class="back-text" onclick="history.back(-1)">กลับ</span> <i onclick="location.href='index.html'" class="title-bar-icon diy-icon-home margin-left"></i>
+							<div class="title flex1 text-center textindent50">หน้าหลัก</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 justify-between items-center flex-nowrap flex-clz">
+					<div class="diygw-col-19">
+						<div class="diygw-search">
+							<div class="flex1 align-center flex padding-xs solid radius">
+								<span style="color: #555 !important" class="diy-icon-search"></span>
+								<van-field class="flex1" name="search1" type="" v-model="search1" placeholder="พิมพ์คำที่ต้องการค้นหา"></van-field>
+							</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-0">
+						<div class="diygw-avatar xs radius bg-none">
+							<img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon15_yj.png" />
+							<div class="diygw-tag badge avatar-badge-0 red">1</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-0">
+						<div class="diygw-tag margin-xs radius">
+							<img class="diygw-tag-img" src="./static/icon8_qd.png" />
+							<span> เช็คอิน </span>
+						</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24">
+					<van-notice-bar class="flex1 diy-notice-bar" scrollable color="#07c160" background="#fff" left-icon=" diy-icon-notification">
+						<span class="diy-notice-item"> แพลตฟอร์มสร้างรายได้ออนไลน์ เพียงสมัครสมาชิกแล้วแชร์ไปที่หน้าเฟสบุ๊ค ก็รับรายได้ทันทีเมื่อเสร็จภารกิจแชร์ </span>
+					</van-notice-bar>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column items-start flex5-clz">
+					<div class="diygw-col-0 text32-clz">ballclub168</div>
+					<div class="diygw-col-0 text33-clz">แจกเครดิตฟรีคนละ 200 บาท</div>
+					<div class="diygw-col-0 text34-clz">เพียงสมัครสมาชิกแล้วกดหน้าทายผลบอล</div>
+					<div class="diygw-col-0 text35-clz">กดทายบอลให้เรียบร้อย แล้วรอรับเงินเข้ายูสได้เลย</div>
+					<div class="flex flex-wrap diygw-col-0 items-center flex45-clz">
+						<div class="diygw-col-0">สนใจสมัคร คลิก</div>
+						<span class="flex icon diygw-col-0 icon-clz diy-icon-back_android"></span>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex12-clz">
+					<div class="flex flex-wrap diygw-col-6 flex-direction-column items-center">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column items-center">
+							<img src="./static/icon1_sz1.png" class="image2-size diygw-image diygw-col-0 image2-clz" mode="widthFix" />
+							<div class="diygw-text-line1 diygw-col-0 animate__animated animate__headShake animate__infinite text9-clz">ใหม่</div>
+						</div>
+						<div class="diygw-text-line1 diygw-col-0 text8-clz">ภารกิจ</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-6 flex-direction-column items-center">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column items-center">
+							<img src="./static/icon1_dz.png" class="image5-size diygw-image diygw-col-0 image5-clz" mode="widthFix" />
+						</div>
+						<div class="diygw-text-line1 diygw-col-0 text7-clz">ประวติ</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-6 flex-direction-column items-center">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column items-center">
+							<img src="./static/icon1_hb.png" class="image7-size diygw-image diygw-col-0 image7-clz" mode="widthFix" />
+							<div class="diygw-text-line1 diygw-col-0 animate__animated animate__headShake animate__infinite text4-clz">ฟรี</div>
+						</div>
+						<div class="diygw-text-line1 diygw-col-0 text10-clz">เครดิตฟรี</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-6 flex-direction-column items-center">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column items-center">
+							<img src="./static/icon1_kf.png" class="image8-size diygw-image diygw-col-0 image8-clz" mode="widthFix" />
+						</div>
+						<div class="diygw-text-line1 diygw-col-0 text11-clz">แชท</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+					<div class="flex flex-wrap diygw-col-24 justify-between items-center flex46-clz">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column flex47-clz">
+							<div class="diygw-col-24 text37-clz"></div>
+							<div class="diygw-col-24 text38-clz">ภารกิจใกล้สำเร็จแล้ว</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-0 items-center flex48-clz">
+							<div class="diygw-col-0">รายละเอียด</div>
+							<span class="flex icon2 diygw-col-0 diy-icon-right"></span>
+						</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 items-center flex49-clz">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column flex50-clz">
+							<div class="diygw-col-0 text44-clz">หากมีคนคลิกสมัครตามเงื่อนไข</div>
+							<div class="flex flex-wrap diygw-col-24 justify-between flex51-clz">
+								<div class="diygw-col-0 text45-clz">30%</div>
+								<div class="diygw-col-0 text46-clz">รับเงินทันที 50บาท</div>
+							</div>
+							<div class="flex flex-wrap diygw-col-24 justify-between">
+								<div class="diygw-col-0 text47-clz"></div>
+								<div class="diygw-col-0 text48-clz"></div>
+								<div class="diygw-col-0 text49-clz"></div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-0 justify-center items-center flex56-clz">
+							<div class="diygw-col-0">กดรับ</div>
+							<span class="flex icon3 diygw-col-0 diy-icon-right"></span>
+						</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-24 items-center flex57-clz">
+						<div class="flex flex-wrap diygw-col-0 flex-direction-column flex58-clz">
+							<div class="diygw-col-0 text51-clz">แชร์ข้อความที่กำหนด</div>
+							<div class="flex flex-wrap diygw-col-24 justify-between flex59-clz">
+								<div class="diygw-col-0 text52-clz">70% ใกล้สำเร็จแล้ว</div>
+								<div class="diygw-col-0 text53-clz">รับเงินทันที 20บาท</div>
+							</div>
+							<div class="flex flex-wrap diygw-col-24 justify-between">
+								<div class="diygw-col-0 text60-clz"></div>
+								<div class="diygw-col-0 text61-clz"></div>
+								<div class="diygw-col-0 text62-clz"></div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-0 justify-center items-center flex61-clz">
+							<div class="diygw-col-0">กดรับ</div>
+							<span class="flex icon4 diygw-col-0 diy-icon-right"></span>
+						</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 line-clz">
+					<div class="diygw-pzx" style="border-bottom: 1px solid #eee"></div>
+				</div>
+				<div class="flex diygw-col-24 items-center flex-nowrap flex37-clz">
+					<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex39-clz">
+						<div class="diygw-col-24 text28-clz">บอลคลับแจกเครดิตฟรี</div>
+						<div class="diygw-col-24 text29-clz">คนละ 200 บาท แค่สมัครสมาชิกทายบอล</div>
+					</div>
+					<div class="diygw-col-0 text30-clz">ทำภารกิจ</div>
+				</div>
+				<div class="flex diygw-col-24 flex-direction-column justify-center items-start flex-wrap flex30-clz">
+					<div class="flex flex-wrap diygw-col-24 flex-direction-column flex31-clz">
+						<div class="flex flex-wrap diygw-col-24 items-baseline">
+							<div class="diygw-col-0 text22-clz">ทำกิจกรรมและรับรางวัล</div>
+							<div class="flex flex-wrap diygw-col-0 items-center">
+								<div class="diygw-col-0">เพิ่มเติม</div>
+								<span class="flex icon1 diygw-col-0 diy-icon-right"></span>
+							</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex34-clz">
+						<img src="./static/sz2.png" class="image15-size diygw-image diygw-col-0 image15-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex35-clz">
+							<div class="diygw-col-24">เข้า google.com</div>
+							<div class="flex flex-wrap diygw-col-24 items-start flex36-clz">
+								<div class="diygw-col-0">ค่าตอบแทน</div>
+								<div class="diygw-col-0 text26-clz text-red">+5 บาท</div>
+							</div>
+						</div>
+						<div class="diygw-col-0 text27-clz">ทำภารกิจ</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 diygw-bottom">
+					<div class="diygw-grid diygw-actions">
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid1.png" />
+								</div>
+								<div class="diygw-grid-title">菜单一</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid2.png" />
+								</div>
+								<div class="diygw-grid-title">菜单二</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid3.png" />
+								</div>
+								<div class="diygw-grid-title">菜单三</div>
+							</div>
+						</button>
+						<button class="diygw-action">
+							<div class="diygw-grid-inner">
+								<div class="diygw-grid-icon diygw-avatar" style="">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/global/grid4.png" />
+								</div>
+								<div class="diygw-grid-title">菜单四</div>
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="diygw-title flex diygw-col-24">
+					<div class="title font-normal">สิทธิ์พิเศษเฉพาะคุณ</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex38-clz">
+					<div class="diygw-col-24 text40-clz">แจกเงินคนละ 10 บาท</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex54-clz">
+						<img src="./static/icon1_yhq.png" class="image9-size diygw-image diygw-col-0 image9-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex55-clz">
+							<div class="diygw-col-24 text57-clz">1.เข้า google</div>
+							<div class="diygw-col-24 text58-clz">
+								<p><span style="font-size: 12px">ค้นหาคำว่าดูหนังออนไลน์</span></p>
+							</div>
+						</div>
+						<div class="diygw-col-0 text59-clz">ทำภารกิจ</div>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex23-clz">
+						<img src="./static/icon1_xsqg.png" class="image10-size diygw-image diygw-col-0 image10-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex24-clz">
+							<div class="diygw-col-24 text12-clz">免费领取流量卡</div>
+							<div class="diygw-col-24 text13-clz">30GB专属流量随心看</div>
+						</div>
+						<div class="diygw-col-0 text14-clz">ทำภารกิจ</div>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex42-clz">
+						<img src="./static/icon1_rm.png" class="image11-size diygw-image diygw-col-0 image11-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex53-clz">
+							<div class="diygw-col-24 text54-clz">热门会员权前每月领</div>
+							<div class="diygw-col-24 text55-clz">视频游戏50+APP免流</div>
+						</div>
+						<div class="diygw-col-0 text56-clz">ทำภารกิจ</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex25-clz">
+					<div class="diygw-col-24 text15-clz">优惠权益</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex40-clz">
+						<img src="./static/icon1_yhq.png" class="image12-size diygw-image diygw-col-0 image12-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex41-clz">
+							<div class="diygw-col-24 text41-clz">1元抢20GB超大流量</div>
+							<div class="diygw-col-24 text42-clz">限时领取，追剧达人必买</div>
+						</div>
+						<div class="diygw-col-0 text43-clz">ทำภารกิจ</div>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex26-clz">
+						<img src="./static/icon1_xsqg.png" class="image13-size diygw-image diygw-col-0 image13-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex27-clz">
+							<div class="diygw-col-24 text16-clz">免费领取流量卡</div>
+							<div class="diygw-col-24 text17-clz">30GB专属流量随心看</div>
+						</div>
+						<div class="diygw-col-0 text18-clz">ทำภารกิจ</div>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap flex28-clz">
+						<img src="./static/icon1_rm.png" class="image14-size diygw-image diygw-col-0 image14-clz" mode="scaleToFill" />
+						<div class="flex diygw-col-0 flex-direction-column justify-between flex-nowrap flex29-clz">
+							<div class="diygw-col-24 text19-clz">热门会员权前每月领</div>
+							<div class="diygw-col-24 text20-clz">视频游戏50+APP免流</div>
+						</div>
+						<div class="diygw-col-0 text21-clz">ทำภารกิจ</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column">
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-100 row solid-bottom">
+								<div class="diygw-avatar">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon1_rm.png" />
+								</div>
+								<div class="content">
+									<div class="title">เงื่อนไขกิจกรรม</div>
+									<div class="text-sm remark">
+										<p><span style="color: #fe1919">ค่าตอบแทน 10 บาท</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="diygw-text-line3 diygw-col-24 text31-clz">
+						<p>1.</p>
+						<p>2.</p>
+						<p>3. </p>
+					</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap">
+						<img src="./static/diygwjpg" class="image16-size diygw-image diygw-col-0 image16-clz" mode="widthFix" />
+					</div>
+					<div class="flex diygw-col-24 justify-between">
+						<div class="diygw-tag diygw-capsule">
+							<div class="diygw-tag bg-pink md radius">
+								<span class="diygw-icon diy-icon-share"></span>
+							</div>
+							<div class="diygw-tag diygw-line-pink radius md">แชร์</div>
+						</div>
+						<div class="diygw-tag diygw-capsule">
+							<div class="diygw-tag bg-purple md radius">
+								<span class="diygw-icon diy-icon-comment"></span>
+							</div>
+							<div class="diygw-tag diygw-line-purple radius md">ถูกใจ</div>
+						</div>
+						<div class="diygw-tag diygw-capsule">
+							<div class="diygw-tag bg-green md radius">
+								<span class="diygw-icon diy-icon-appreciate"></span>
+							</div>
+							<div class="diygw-tag diygw-line-green radius md">คงเหลือ 120 สิทธ์</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-pzx" style="border-bottom: 5px solid #eee"></div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24">
+					<div class="flex diygw-col-12 flex-direction-column justify-center items-center flex-nowrap flex3-clz">
+						<img src="./static/wbt-3jpg" class="image1-size diygw-image diygw-col-24 image1-clz" mode="widthFix" />
+						<div class="diygw-col-0 text-clz">DIY视频教程</div>
+						<div class="diygw-col-0 text1-clz">免费领取</div>
+					</div>
+					<div class="flex diygw-col-12 flex-direction-column justify-center items-center flex-nowrap flex4-clz">
+						<img src="./static/d3ad3a6bf322e6b7d8c6a7fa09e80f26.jpg" class="image3-size diygw-image diygw-col-24 image3-clz" mode="widthFix" />
+						<div class="diygw-col-0 text2-clz">DIY视频教程</div>
+						<div class="diygw-col-0 text3-clz">免费领取</div>
+					</div>
+				</div>
+				<div class="diygw-title flex diygw-col-24">
+					<div class="title font-normal">榜单</div>
+				</div>
+				<scroll-view @scrolltoupper="scrolltoupperFlex5" @scrolltolower="scrolltolowerFlex5" scroll-x scroll-with-animation class="flex scroll-view diygw-col-24 flex-nowrap flex5-clz">
+					<div class="flex flex-nowrap">
+						<div class="flex flex-wrap diygw-col-21 flex-direction-column flex7-clz">
+							<div class="diygw-title flex gradual-orange diygw-col-24">
+								<div class="title font-normal">热门课程Top50</div>
+								<div class="more">
+									<span class="diy-icon-right"></span>
+								</div>
+							</div>
+							<div class="flex diygw-col-24">
+								<div class="diygw-list">
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list1-item-clz">
+										<div class="diygw-avatar list1-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list1-item-clz">
+										<div class="diygw-avatar list1-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-3jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list1-item-clz">
+										<div class="diygw-avatar list1-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-21 flex-direction-column flex11-clz">
+							<div class="diygw-title flex gradual-red diygw-col-24">
+								<div class="title font-normal">热门课程Top50</div>
+								<div class="more">
+									<span class="diy-icon-right"></span>
+								</div>
+							</div>
+							<div class="flex diygw-col-24">
+								<div class="diygw-list">
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list6-item-clz">
+										<div class="diygw-avatar list6-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list6-item-clz">
+										<div class="diygw-avatar list6-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-3jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+									<div style="" class="diygw-item col-100 row arrow solid-bottom list6-item-clz">
+										<div class="diygw-avatar list6-icon-clz">
+											<img mode="aspectFit" class="diygw-avatar-img" src="./static/wbt-4jpg" />
+										</div>
+										<div class="content">
+											<div class="title">设计新人【实战DIY可视化】</div>
+											<div class="text-sm remark">教大家如何快速用DIY可视化做项目</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-wrap diygw-col-3 flex-direction-column"></div>
+					</div>
+				</scroll-view>
+				<div class="flex diygw-col-24">
+					<div class="diygw-pzx" style="border-bottom: 5px solid #eee"></div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column">
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-100 row solid-bottom">
+								<div class="diygw-avatar">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon1_rm.png" />
+								</div>
+								<div class="content">
+									<div class="title">DIY可视化</div>
+									<div class="text-sm remark">3天前 DIY可视化公司</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-100 flex-direction-row-reverse solid-bottom list4-item-clz">
+								<div class="diygw-avatar list4-icon-clz">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/miniprogramcode_177png" />
+								</div>
+								<div class="content">
+									<div class="title">DIY可视化开源推荐</div>
+									<div class="text-sm remark">DIY官网可视化工具做好的可视化拖拽开发工具，无须编程、零代码基础、所见即所得设计工具，轻松制作微信小程序、支付宝小程序、Vue3、H5、WebApp、UNIAPP、单页动画</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex diygw-col-24 justify-between">
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-share"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-comment"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-appreciate"></span>
+							<span> 2020-2-12 </span>
+						</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-pzx" style="border-bottom: 5px solid #eee"></div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column">
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-100 row solid-bottom">
+								<div class="diygw-avatar">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon1_rm.png" />
+								</div>
+								<div class="content">
+									<div class="title">DIY可视化</div>
+									<div class="text-sm remark">3天前 DIY可视化公司</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="diygw-col-24 text5-clz">DIY官网可视化工具做好的可视化拖拽开发工具，无须编程、零代码基础、所见即所得设计工具，轻松制作微信小程序、支付宝小程序、Vue3、H5、WebApp、UNIAPP、单页动画</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap">
+						<img src="./static/diygwjpg" class="image-size diygw-image diygw-col-0 image-clz" mode="widthFix" />
+					</div>
+					<div class="flex diygw-col-24 justify-between">
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-share"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-comment"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-appreciate"></span>
+							<span> 2020-2-12 </span>
+						</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-pzx" style="border-bottom: 5px solid #eee"></div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column">
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-100 row solid-bottom">
+								<div class="diygw-avatar">
+									<img mode="aspectFit" class="diygw-avatar-img" src="./static/icon1_rm.png" />
+								</div>
+								<div class="content">
+									<div class="title">DIY可视化</div>
+									<div class="text-sm remark">3天前 DIY可视化公司</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="diygw-col-24 text6-clz">DIY官网可视化工具做好的可视化拖拽开发工具，无须编程、零代码基础、所见即所得设计工具，轻松制作微信小程序、支付宝小程序、Vue3、H5、WebApp、UNIAPP、单页动画</div>
+					<div class="flex diygw-col-24 items-center flex-nowrap">
+						<img src="./static/pic1.jpg" class="image4-size diygw-image diygw-col-0 image4-clz" mode="widthFix" />
+						<img src="./static/diygwjpg" class="image6-size diygw-image diygw-col-0 image6-clz" mode="widthFix" />
+					</div>
+					<div class="flex diygw-col-24 justify-between">
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-share"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-comment"></span>
+							<span> 1000 </span>
+						</div>
+						<div class="diygw-tag md radius">
+							<span class="diygw-icon diy-icon-appreciate"></span>
+							<span> 2020-2-12 </span>
+						</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-pzx" style="border-bottom: 5px solid #eee"></div>
+					</div>
+				</div>
+				<div class="version text-grey flex-direction-column flex diygw-col-24 justify-center align-center">
+					<div>DIY官网代码生成器生成</div>
+					<div>http://www.diygw.com</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</body>
+	<script type="module">
+		const app = Vue.createApp({
+			data() {
+				return {
+					globalData: { test: '1' },
+					search1: ''
+				};
+			},
+			created() {
+				this.init();
+			},
+			methods: {
+				async init() {},
+				scrolltoupperFlex5(evt) {},
+				scrolltolowerFlex5(evt) {}
+			}
+		});
+		app.use(vant);
+		app.use(DiygwLib);
+		app.config.globalProperties.$tools = new Tools();
+		app.config.globalProperties.$http = httpService;
+		app.config.globalProperties.$session = Session;
+		app.mixin({
+			methods: {
+				Validate,
+				setData,
+				navigateTo,
+				showModal,
+				showToast,
+				uploadImage
+			}
+		});
+		app.mount('#app');
+	</script>
+	<style>
+		.flex-clz {
+			margin-left: 10px;
+			z-index: 1000;
+			width: calc(100% - 10px - 10px) !important;
+			margin-top: 10px;
+			margin-bottom: 0px;
+			margin-right: 10px;
+		}
+		.avatar-badge-0 {
+			right: -5px;
+		}
+		.flex5-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 6px;
+			background-size: 100% 100%;
+			color: #fff4f4;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-top-right-radius: 6px;
+			background-position: center center;
+			margin-right: 10px;
+			margin-left: 10px;
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 10px;
+			border-bottom-right-radius: 6px;
+			background-image: url(/static/6b91afe0-5548-4049-9a86-2eaaeb09767f.png);
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+		.text32-clz {
+			margin-left: 5px;
+			font-weight: bold;
+			font-size: 15px !important;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			margin-right: 5px;
+		}
+		.text33-clz {
+			margin-left: 5px;
+			font-weight: bold;
+			font-size: 15px !important;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			margin-right: 5px;
+		}
+		.text34-clz {
+			margin-left: 5px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			margin-right: 5px;
+		}
+		.text35-clz {
+			margin-left: 5px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			margin-right: 5px;
+		}
+		.flex45-clz {
+			padding-top: 5px;
+			border-bottom-left-radius: 6px;
+			padding-left: 10px;
+			padding-bottom: 5px;
+			border-top-right-radius: 6px;
+			margin-right: 5px;
+			background-color: rgba(0, 0, 0, 0.62);
+			margin-left: 5px;
+			overflow: hidden;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			padding-right: 10px;
+		}
+		.icon-clz {
+			transform: translate(0px, 0px) rotate(180deg);
+		}
+		.icon {
+			font-size: 24px;
+		}
+		.flex12-clz {
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			padding-right: 10px;
+		}
+		.image2-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image2-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.text9-clz {
+			border: 1px solid #eee;
+			padding-top: 0px;
+			border-bottom-left-radius: 20px;
+			-webkit-animation-duration: 3000ms;
+			color: #ffffff;
+			animation-delay: 100ms;
+			padding-left: 6px;
+			-webkit-animation-delay: 100ms;
+			padding-bottom: 0px;
+			border-top-right-radius: 20px;
+			right: -18px;
+			animation-duration: 3000ms;
+			overflow: hidden;
+			top: -7px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(45deg, #f43f3b, #ec008c);
+			position: absolute;
+			padding-right: 6px;
+		}
+		.text8-clz {
+			margin-left: 0px;
+			font-weight: bold;
+			font-size: 14px !important;
+			margin-top: 3px;
+			margin-bottom: 3px;
+			margin-right: 0px;
+		}
+		.image5-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image5-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.text7-clz {
+			margin-left: 0px;
+			font-weight: bold;
+			font-size: 14px !important;
+			margin-top: 3px;
+			margin-bottom: 3px;
+			margin-right: 0px;
+		}
+		.image7-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image7-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.text4-clz {
+			border: 1px solid #eee;
+			padding-top: 0px;
+			border-bottom-left-radius: 20px;
+			-webkit-animation-duration: 3000ms;
+			color: #ffffff;
+			animation-delay: 100ms;
+			padding-left: 6px;
+			-webkit-animation-delay: 100ms;
+			padding-bottom: 0px;
+			border-top-right-radius: 20px;
+			right: -18px;
+			animation-duration: 3000ms;
+			overflow: hidden;
+			top: -7px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(45deg, #39b54a, #8dc63f);
+			position: absolute;
+			padding-right: 6px;
+		}
+		.text10-clz {
+			margin-left: 0px;
+			font-weight: bold;
+			font-size: 14px !important;
+			margin-top: 3px;
+			margin-bottom: 3px;
+			margin-right: 0px;
+		}
+		.image8-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image8-size {
+			height: 48px !important;
+			width: 48px !important;
+		}
+		.text11-clz {
+			margin-left: 0px;
+			font-weight: bold;
+			font-size: 14px !important;
+			margin-top: 3px;
+			margin-bottom: 3px;
+			margin-right: 0px;
+		}
+		.flex1-clz {
+			padding-top: 5px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.flex46-clz {
+			margin-left: 8px;
+			width: calc(100% - 8px - 8px) !important;
+			margin-top: 8px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.flex47-clz {
+			font-weight: bold;
+			font-size: 18px !important;
+		}
+		.text37-clz {
+			flex-shrink: 0;
+			left: 0px;
+			bottom: 3px;
+			background-image: linear-gradient(90deg, rgba(56, 75, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+			position: absolute;
+			height: 5px !important;
+		}
+		.text38-clz {
+			padding-top: 0px;
+			padding-left: 0px;
+			padding-bottom: 0px;
+			padding-right: 15px;
+		}
+		.flex48-clz {
+			padding-top: 2px;
+			color: #a2a2a2;
+			padding-left: 5px;
+			padding-bottom: 2px;
+			padding-right: 5px;
+		}
+		.icon2 {
+			font-size: 12px;
+		}
+		.flex49-clz {
+			padding-top: 15px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			margin-right: 8px;
+			background-color: #ffffff;
+			margin-left: 8px;
+			box-shadow: 0px 1px 3px rgba(225, 234, 255, 0.45);
+			overflow: hidden;
+			width: calc(100% - 8px - 8px) !important;
+			margin-top: 8px;
+			background-image: url(/static/bg3.png);
+			margin-bottom: 8px;
+			padding-right: 15px;
+		}
+		.flex50-clz {
+			flex: 1;
+		}
+		.text44-clz {
+			color: #6674ff;
+			font-weight: bold;
+			font-size: 16px !important;
+		}
+		.flex51-clz {
+			padding-top: 10px;
+			padding-left: 0px;
+			padding-bottom: 3px;
+			padding-right: 0px;
+		}
+		.text45-clz {
+			color: #606fff;
+		}
+		.text46-clz {
+			color: #fb6a12;
+		}
+		.text47-clz {
+			flex-shrink: 0;
+			border-bottom-left-radius: 20px;
+			overflow: hidden;
+			width: 30% !important;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			background-image: linear-gradient(90deg, rgba(56, 75, 255, 1) 0%, rgba(120, 127, 254, 1) 100%);
+			height: 16px !important;
+		}
+		.text48-clz {
+			flex-shrink: 0;
+			width: 10px !important;
+		}
+		.text49-clz {
+			flex-shrink: 0;
+			border-bottom-left-radius: 0px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(270deg, rgba(255, 130, 39, 1) 0%, rgba(253, 194, 48, 1) 100%);
+			height: 16px !important;
+		}
+		.flex56-clz {
+			padding-top: 8px;
+			border-bottom-left-radius: 20px;
+			color: #f8f8f8;
+			padding-left: 12px;
+			font-size: 14px !important;
+			padding-bottom: 8px;
+			border-top-right-radius: 20px;
+			margin-right: 0px;
+			margin-left: 8px;
+			overflow: hidden;
+			border-top-left-radius: 20px;
+			margin-top: 8px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(90deg, rgba(56, 75, 255, 1) 0%, rgba(120, 127, 254, 1) 100%);
+			margin-bottom: 8px;
+			padding-right: 12px;
+		}
+		.icon3 {
+			font-size: 16px;
+		}
+		.flex57-clz {
+			padding-top: 15px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			margin-right: 8px;
+			background-color: #ffffff;
+			margin-left: 8px;
+			box-shadow: 0px 1px 3px rgba(225, 234, 255, 0.45);
+			overflow: hidden;
+			width: calc(100% - 8px - 8px) !important;
+			margin-top: 8px;
+			background-image: url(/static/bg3.png);
+			margin-bottom: 8px;
+			padding-right: 15px;
+		}
+		.flex58-clz {
+			flex: 1;
+		}
+		.text51-clz {
+			color: #6674ff;
+			font-weight: bold;
+			font-size: 16px !important;
+		}
+		.flex59-clz {
+			padding-top: 10px;
+			padding-left: 0px;
+			padding-bottom: 3px;
+			padding-right: 0px;
+		}
+		.text52-clz {
+			color: #606fff;
+		}
+		.text53-clz {
+			color: #fb6a12;
+		}
+		.text60-clz {
+			flex-shrink: 0;
+			border-bottom-left-radius: 20px;
+			overflow: hidden;
+			width: 70% !important;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			background-image: linear-gradient(90deg, rgba(56, 75, 255, 1) 0%, rgba(120, 127, 254, 1) 100%);
+			height: 16px !important;
+		}
+		.text61-clz {
+			flex-shrink: 0;
+			width: 10px !important;
+		}
+		.text62-clz {
+			flex-shrink: 0;
+			border-bottom-left-radius: 0px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(270deg, rgba(255, 130, 39, 1) 0%, rgba(253, 194, 48, 1) 100%);
+			height: 16px !important;
+		}
+		.flex61-clz {
+			padding-top: 8px;
+			border-bottom-left-radius: 20px;
+			color: #f8f8f8;
+			padding-left: 12px;
+			font-size: 14px !important;
+			padding-bottom: 8px;
+			border-top-right-radius: 20px;
+			margin-right: 0px;
+			margin-left: 8px;
+			overflow: hidden;
+			border-top-left-radius: 20px;
+			margin-top: 8px;
+			border-bottom-right-radius: 20px;
+			background-image: linear-gradient(90deg, rgba(56, 75, 255, 1) 0%, rgba(120, 127, 254, 1) 100%);
+			margin-bottom: 8px;
+			padding-right: 12px;
+		}
+		.icon4 {
+			font-size: 16px;
+		}
+		.line-clz {
+			margin-left: 10px;
+			width: calc(100% - 10px - 10px) !important;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: 10px;
+		}
+		.flex37-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 12px;
+			background-size: cover;
+			color: #fff8ba;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-top-right-radius: 12px;
+			background-position: center center;
+			margin-right: 10px;
+			background-color: #ffffff;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 3px rgba(195, 195, 195, 0.16);
+			overflow: hidden;
+			flex: 1;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 10px;
+			border-bottom-right-radius: 12px;
+			background-image: url(/static/c80bb55c-05e2-4cfe-8489-9bee57c41025.png);
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+		.flex39-clz {
+			padding-top: 0px;
+			flex: 1;
+			padding-left: 5px;
+			padding-bottom: 0px;
+			padding-right: 0px;
+		}
+		.text28-clz {
+			font-weight: bold;
+			font-size: 16px !important;
+		}
+		.text29-clz {
+			margin-left: 0px;
+			width: 100% !important;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 0px;
+		}
+		.text30-clz {
+			background-color: #fff8ba;
+			padding-top: 10px;
+			border-bottom-left-radius: 20px;
+			overflow: hidden;
+			color: #b20900;
+			font-weight: bold;
+			padding-left: 15px;
+			padding-bottom: 10px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			padding-right: 15px;
+		}
+		.flex30-clz {
+			border-bottom-left-radius: 12px;
+			z-index: 100;
+			background-size: cover;
+			border-top-right-radius: 12px;
+			background-position: top left;
+			margin-right: 10px;
+			background-color: #ffffff;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 3px rgba(195, 195, 195, 0.16);
+			overflow: hidden;
+			flex: 1;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 12px;
+			margin-top: 0px;
+			border-bottom-right-radius: 12px;
+			margin-bottom: 0px;
+		}
+		.flex31-clz {
+			padding-top: 15px;
+			color: #ffffff;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			background-image: url(/static/cfe2af9f-9039-49d4-9ab6-47c976712d90.png);
+			padding-right: 15px;
+		}
+		.text22-clz {
+			font-weight: bold;
+			flex: 1;
+			font-size: 14px !important;
+		}
+		.icon1 {
+			font-size: 12px;
+		}
+		.flex34-clz {
+			background-color: #fefefe;
+			padding-top: 15px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			padding-right: 15px;
+		}
+		.image15-clz {
+			border-bottom-left-radius: 6px;
+			overflow: hidden;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+		}
+		.image15-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex35-clz {
+			padding-top: 0px;
+			flex: 1;
+			padding-left: 5px;
+			padding-bottom: 0px;
+			padding-right: 0px;
+		}
+		.flex36-clz {
+			margin-left: 0px;
+			width: 100% !important;
+			margin-top: 5px;
+			margin-bottom: 0px;
+			margin-right: 0px;
+		}
+		.text26-clz {
+			color: #ff9100;
+			font-weight: bold;
+			font-size: 15px !important;
+		}
+		.text27-clz {
+			background-color: #6b63ff;
+			padding-top: 10px;
+			border-bottom-left-radius: 20px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 15px;
+			padding-bottom: 10px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			padding-right: 15px;
+		}
+		.flex38-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 8px;
+			background-size: 100% 100%;
+			color: #7666ff;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-top-right-radius: 8px;
+			margin-right: 10px;
+			margin-left: 10px;
+			box-shadow: 0px 0px 8px #d9dcff;
+			overflow: hidden;
+			width: calc(100% - 10px - 10px) !important;
+			border-top-left-radius: 8px;
+			margin-top: 10px;
+			border-bottom-right-radius: 8px;
+			background-image: linear-gradient(90deg, rgba(252, 253, 255, 0.94) 10%, rgba(238, 243, 255, 0.95) 50%, rgba(252, 253, 255, 0.94) 100%);
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+		.text40-clz {
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.flex54-clz {
+			padding-top: 5px;
+			border-bottom-left-radius: 0px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			border-top-right-radius: 10px;
+			margin-right: 0px;
+			margin-left: 0px;
+			overflow: hidden;
+			flex: 1;
+			width: 100% !important;
+			border-top-left-radius: 0px;
+			margin-top: 5px;
+			border-bottom-right-radius: 10px;
+			background-image: linear-gradient(90deg, rgba(252, 253, 255, 0.94) 0%, #d4ddff 100%);
+			margin-bottom: 5px;
+			padding-right: 5px;
+		}
+		.image9-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image9-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex55-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 10px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text57-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text58-clz {
+			color: #747474;
+		}
+		.text59-clz {
+			background-color: #887cfe;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.flex23-clz {
+			padding-top: 5px;
+			border-bottom-left-radius: 0px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			border-top-right-radius: 10px;
+			margin-right: 0px;
+			margin-left: 0px;
+			overflow: hidden;
+			flex: 1;
+			width: 100% !important;
+			border-top-left-radius: 0px;
+			margin-top: 5px;
+			border-bottom-right-radius: 10px;
+			background-image: linear-gradient(90deg, rgba(252, 253, 255, 0.94) 0%, #d4ddff 100%);
+			margin-bottom: 5px;
+			padding-right: 5px;
+		}
+		.image10-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image10-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex24-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 10px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text12-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text13-clz {
+			color: #747474;
+		}
+		.text14-clz {
+			background-color: #887cfe;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.flex42-clz {
+			padding-top: 5px;
+			border-bottom-left-radius: 0px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			border-top-right-radius: 10px;
+			margin-right: 0px;
+			margin-left: 0px;
+			overflow: hidden;
+			flex: 1;
+			width: 100% !important;
+			border-top-left-radius: 0px;
+			margin-top: 5px;
+			border-bottom-right-radius: 10px;
+			background-image: linear-gradient(90deg, rgba(252, 253, 255, 0.94) 0%, #d4ddff 100%);
+			margin-bottom: 5px;
+			padding-right: 5px;
+		}
+		.image11-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image11-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex53-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 10px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text54-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text55-clz {
+			color: #747474;
+		}
+		.text56-clz {
+			background-color: #887cfe;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.flex25-clz {
+			padding-top: 10px;
+			border-bottom-left-radius: 15px;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-top-right-radius: 15px;
+			margin-right: 20px;
+			background-color: #ffffff;
+			margin-left: 20px;
+			box-shadow: 0px 1px 6px 1px rgba(31, 31, 31, 0.09);
+			overflow: hidden;
+			width: calc(100% - 20px - 20px) !important;
+			border-top-left-radius: 15px;
+			margin-top: 15px;
+			border-bottom-right-radius: 15px;
+			margin-bottom: 0px;
+			padding-right: 10px;
+		}
+		.text15-clz {
+			margin-left: 5px;
+			font-weight: bold;
+			width: calc(100% - 5px - 5px) !important;
+			font-size: 14px !important;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.flex40-clz {
+			padding-top: 8px;
+			padding-left: 8px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #eee;
+			padding-right: 8px;
+		}
+		.image12-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image12-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex41-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text41-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text42-clz {
+			color: #747474;
+		}
+		.text43-clz {
+			background-color: #f33333;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.flex26-clz {
+			padding-top: 8px;
+			padding-left: 8px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #eee;
+			padding-right: 8px;
+		}
+		.image13-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image13-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex27-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text16-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text17-clz {
+			color: #747474;
+		}
+		.text18-clz {
+			background-color: #f33333;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.flex28-clz {
+			padding-top: 8px;
+			padding-left: 8px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #eee;
+			padding-right: 8px;
+		}
+		.image14-clz {
+			border-bottom-left-radius: 60px;
+			overflow: hidden;
+			border-top-left-radius: 60px;
+			border-top-right-radius: 60px;
+			border-bottom-right-radius: 60px;
+		}
+		.image14-size {
+			height: 40px !important;
+			width: 40px !important;
+		}
+		.flex29-clz {
+			padding-top: 5px;
+			flex: 1;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.text19-clz {
+			color: #1d1d1d;
+			font-weight: bold;
+			font-size: 14px !important;
+		}
+		.text20-clz {
+			color: #747474;
+		}
+		.text21-clz {
+			background-color: #f33333;
+			padding-top: 5px;
+			border-bottom-left-radius: 16px;
+			overflow: hidden;
+			color: #ffffff;
+			font-weight: bold;
+			padding-left: 20px;
+			padding-bottom: 5px;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			padding-right: 20px;
+		}
+		.text31-clz {
+			padding-top: 0px;
+			padding-left: 10px;
+			padding-bottom: 0px;
+			padding-right: 10px;
+		}
+		.image16-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image16-size {
+			height: 120px !important;
+			width: 100% !important;
+		}
+		.flex3-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(50% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.image1-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			width: calc(100% - 8px - 8px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image1-size {
+			height: 80px !important;
+			width: 100%;
+		}
+		.text-clz {
+			font-size: 16px !important;
+		}
+		.text1-clz {
+			border: 1px solid #fb0909;
+			padding-top: 3px;
+			border-bottom-left-radius: 30px;
+			color: #fb0909;
+			padding-left: 15px;
+			font-size: 16px !important;
+			padding-bottom: 3px;
+			border-top-right-radius: 30px;
+			margin-right: 5px;
+			margin-left: 5px;
+			overflow: hidden;
+			border-top-left-radius: 30px;
+			margin-top: 5px;
+			border-bottom-right-radius: 30px;
+			margin-bottom: 5px;
+			padding-right: 15px;
+		}
+		.flex4-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(50% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.image3-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			width: calc(100% - 8px - 8px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image3-size {
+			height: 80px !important;
+			width: 100%;
+		}
+		.text2-clz {
+			font-size: 16px !important;
+		}
+		.text3-clz {
+			border: 1px solid #fb0909;
+			padding-top: 3px;
+			border-bottom-left-radius: 30px;
+			color: #fb0909;
+			padding-left: 15px;
+			font-size: 16px !important;
+			padding-bottom: 3px;
+			border-top-right-radius: 30px;
+			margin-right: 5px;
+			margin-left: 5px;
+			overflow: hidden;
+			border-top-left-radius: 30px;
+			margin-top: 5px;
+			border-bottom-right-radius: 30px;
+			margin-bottom: 5px;
+			padding-right: 15px;
+		}
+		.flex5-clz {
+			padding-top: 5px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+			padding-right: 5px;
+		}
+		.flex7-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(87.5% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.list1-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list1-item-clz .list1-icon-clz {
+			width: 60px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+		.flex11-clz {
+			margin-left: 5px;
+			border-bottom-left-radius: 6px;
+			box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			width: calc(87.5% - 5px - 5px) !important;
+			border-top-left-radius: 6px;
+			margin-top: 5px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.list6-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list6-item-clz .list6-icon-clz {
+			width: 60px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+		.list4-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list4-item-clz .list4-icon-clz {
+			width: 100px;
+			height: 100px;
+			font-size: calc(100px - 4px) !important;
+		}
+		.text5-clz {
+			padding-top: 0px;
+			padding-left: 10px;
+			padding-bottom: 0px;
+			padding-right: 10px;
+		}
+		.image-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image-size {
+			height: 120px !important;
+			width: 100% !important;
+		}
+		.text6-clz {
+			padding-top: 0px;
+			padding-left: 10px;
+			padding-bottom: 0px;
+			padding-right: 10px;
+		}
+		.image4-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image4-size {
+			height: 80px !important;
+			width: 100% !important;
+		}
+		.image6-clz {
+			margin-left: 8px;
+			border-bottom-left-radius: 10px;
+			overflow: hidden;
+			flex: 1;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+		.image6-size {
+			height: 80px !important;
+			width: 100% !important;
+		}
+		.container24325 {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.container24325 {
+			padding-top: 45px;
+			padding-bottom: 80px;
+		}
+	</style>
+</html>

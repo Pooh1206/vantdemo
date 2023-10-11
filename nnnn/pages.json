@@ -1,0 +1,54 @@
+{
+	"pages": [
+		{
+			"path": "pages/webview",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "gmth99",
+		"navigationBarBackgroundColor": "#ff1e8e",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#f10f93",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"pagePath": "pages/index",
+				"iconPath": "static/global/grid1c.png",
+				"selectedIconPath": "static/global/grid1.png",
+				"text": "หน้าหลัก"
+			},
+			{
+				"pagePath": "pages/cate",
+				"iconPath": "static/global/grid2c.png",
+				"selectedIconPath": "static/global/grid2.png",
+				"text": "ภารกิจ"
+			},
+			{
+				"pagePath": "pages/quan",
+				"iconPath": "static/global/grid3c.png",
+				"selectedIconPath": "static/global/grid3.png",
+				"text": "อันดับ"
+			},
+			{
+				"pagePath": "pages/user16931373046770d1df0564a",
+				"iconPath": "static/global/grid5c.png",
+				"selectedIconPath": "static/global/grid5.png",
+				"text": "แชท"
+			},
+			{
+				"pagePath": "pages/user",
+				"iconPath": "static/global/grid4c.png",
+				"selectedIconPath": "static/global/grid4.png",
+				"text": "ข้อมูล"
+			}
+		]
+	}
+}
