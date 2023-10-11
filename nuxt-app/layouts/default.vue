@@ -8,7 +8,7 @@
 </template>
 
 <style>
-@import '/css/vant.css';
+
 @import '/css/index.css';
 
 </style>
