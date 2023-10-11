@@ -1,7 +1,9 @@
 <template>
-  <div>
+  	<div id="app">
+			<div class="container container22243">
     <slot></slot>
     <Tabbar1 />
+    </div>
   </div> 
 </template>
 
