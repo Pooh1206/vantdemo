@@ -1,6 +1,6 @@
 <template>
     <div>
-		<view class="flex diygw-col-24 flex-direction-column flex-nowrap flex-clz">
+		<!-- <view class="flex diygw-col-24 flex-direction-column flex-nowrap flex-clz">
 			<view class="diygw-col-24 white search-clz">
 				<view class="diygw-search">
 					<view class="flex1 align-center flex padding-xs radius">
@@ -9,7 +9,7 @@
 					</view>
 				</view>
 			</view>
-		</view>
+		</view> -->
         <h1>home</h1>
     </div>
 </template>
