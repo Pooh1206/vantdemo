@@ -23,6 +23,7 @@
 			<view style="color: grey;width: 50%;padding-bottom: 30px" @click="goZhifuBao">提现账号</view>
 			<view style="color: grey;width: 50%;padding-bottom: 30px" @click="list">提现记录</view>
 		</view>
+		<Navbar />
 	</view>
 </template>
 
