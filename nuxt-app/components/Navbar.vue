@@ -26,7 +26,6 @@ const onClickLeft = () => {
 </script>
 
 <template>
-
   <van-nav-bar
     fixed
     left-arrow
@@ -35,9 +34,6 @@ const onClickLeft = () => {
     :right-text="rightText"
     @click-right="onClickRight"
   ></van-nav-bar>
-  <div id="u34" class="ax_default _默认样式">
-    
-  </div>
 </template>
 
 <style lang="scss" scoped>
