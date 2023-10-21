@@ -48,7 +48,7 @@
 			},
 			goZhifuBao() {
 				uni.navigateTo({
-					url: "/pages/member/zhifubao"
+					url: "/pages/member"
 				})
 			},
 			getMoney() {
@@ -65,7 +65,7 @@
 							this.$queue.showToast(res.msg);
 							this.$queue.logout();
 							uni.navigateTo({
-								url: '/pages/public/login'
+								url: '/pages/login'
 							})
 						} else {
 							that.money = '0.00';
@@ -134,7 +134,7 @@
 </script>
 
 <style lang='less'>
-	@import "../../static/css/index.css";
+	@import "../static/css/index.css";
 
 	.cash {
 		text-align: center;
