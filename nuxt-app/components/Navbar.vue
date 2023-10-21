@@ -27,7 +27,17 @@ const onClickLeft = () => {
 
 <template>
 
-<div id="search" class=""></div>
+  <van-nav-bar
+    fixed
+    left-arrow
+    @click-left="onClickLeft"
+    :title="title"
+    :right-text="rightText"
+    @click-right="onClickRight"
+  ></van-nav-bar>
+  <div id="u34" class="ax_default _默认样式">
+    
+  </div>
 </template>
 
 <style lang="scss" scoped>
