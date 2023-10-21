@@ -3,6 +3,7 @@
 			<div class="container container22243">
         <Navbar />
     <slot></slot>
+    <Cpicon />
     <Tabbar1 />
     </div>
   </div> 
